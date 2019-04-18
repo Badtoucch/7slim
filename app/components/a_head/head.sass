@@ -1,0 +1,124 @@
+.header
+	background: url(../img/bg_head.jpg) repeat-x center
+	&-top
+		width: 710px
+		margin-left: auto
+		position: relative
+		.logo
+			position: absolute
+			left: 0
+			top: 0
+	&-links
+		display: flex
+		margin-left: 140px
+		padding-top: 35px
+		&__item
+			a
+				color: #000000
+				font-size: 16px
+				font-weight: 400
+				line-height: 1
+				padding-left: 35px
+				position: relative
+			.rev-link
+				padding-left: 41px
+				&:after
+					content: ''
+					width: 58px
+					height: 1px
+					border-bottom: 1px dotted #000
+					position: absolute
+					bottom: 0
+					right: 1px
+					opacity: 1
+					transition: opacity .3s
+				&:before
+					content: ''
+					position: absolute
+					top: -5px
+					left: 0
+					width: 28px
+					height: 26px
+					background: url(../img/rev-icon.svg) no-repeat center
+				&:hover
+					&:before
+						background: url(../img/rev-icon2.svg) no-repeat center
+					&:after
+						opacity: 0
+			.comp-link
+				padding-left: 31px
+				&:after
+					content: ''
+					width: 52px
+					height: 1px
+					border-bottom: 1px dotted #000
+					position: absolute
+					bottom: 0
+					right: 1px
+					opacity: 1
+					transition: opacity .3s
+				&:before
+					content: ''
+					position: absolute
+					top: -10px
+					left: 0
+					width: 21px
+					height: 34px
+					background: url(../img/comp-icon.svg) no-repeat center
+				&:hover
+					&:before
+						background: url(../img/comp-icon2.svg) no-repeat center
+					&:after
+						opacity: 0
+			&:last-child
+				margin-left: 50px
+	&-content
+		display: flex
+		justify-content: flex-end
+	&-bottom
+		margin-top: 29px
+		position: relative
+	&-pack
+		position: absolute
+		top: 0
+		left: 0
+	&-text
+		margin-right: 40px
+		&__title
+			color: #000000
+			font-size: 50px
+			font-weight: 900
+			line-height: 46px
+			margin-top: 50px
+			
+		&__subtitle
+			color: #000000
+			font-family: Roboto
+			font-size: 24px
+			font-weight: 500
+			line-height: 46px
+			margin-top: 10px
+			b
+				font-weight: 700
+	&-list
+		&__item
+			color: #444444
+			font-size: 19px
+			font-weight: 400
+			line-height: 23px
+			margin-bottom: 26px
+			position: relative
+			padding-left: 62px
+			&:before
+				content: ''
+				width: 40px
+				height: 40px
+				background-color: #85c336
+				border-radius: 50%
+				background: url(../img/check.svg) 50% 50% no-repeat
+				background-color: #85c336
+				position: absolute
+				top: 0
+				left: 0
+			b
+				font-weight: 700
