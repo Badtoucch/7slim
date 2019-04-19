@@ -1,0 +1,20 @@
+.reason{
+  background: #fff;
+  padding: 20px 0;
+  &__icon{
+    background: #e03954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    align-self: center;
+    margin: 0 auto;
+    box-shadow: 0 0 0 1px #e03954;
+  }
+  &__wrap{
+
+  }
+}
