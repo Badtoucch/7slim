@@ -1,17 +1,68 @@
 .header
 	background: url(../img/bg_head.jpg) repeat-x center
+	position: relative
+	padding-bottom: 120px
+	+r(1023)
+		background: linear-gradient(to top, rgba(224, 57, 84, 0.13) 0%, rgba(222, 217, 165, 0.13) 48%, rgba(45, 182, 77, 0.13) 100%)
+		padding-bottom: 40px
+	+r(767)
+		padding-bottom: 30px
+	+r(479)
+		padding-bottom: 25px
+	&:before
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: 46px
+		background: url(../img/girl.png) no-repeat center
+		width: 473px
+		height: 691px
+		transform: translateX(-133%)
+		+r(1023)
+			display: none
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: -3px
+		background: url(../img/bg-line.png) repeat-x center
+		width: 2560px
+		height: 61px
+		transform: translateX(-50%)
+		+r(1023)
+			display: none
 	&-top
 		width: 710px
 		margin-left: auto
 		position: relative
+		+r(1189)
+			width: 650px
+		+r(1023)
+			margin-left: auto
+			margin-right: auto
+			width: 350px
+		+r(479)
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
 		.logo
 			position: absolute
 			left: 0
 			top: 0
+			+r(479)
+				position: initial
+				width: 60px
 	&-links
 		display: flex
 		margin-left: 140px
 		padding-top: 35px
+		+r(1023)
+			margin-left: 110px
+		+r(479)
+			margin-left: 0
+			padding-top: 15px
+			display: none
 		&__item
 			a
 				color: #000000
@@ -72,25 +123,76 @@
 						opacity: 0
 			&:last-child
 				margin-left: 50px
+				+r(1023)
+					margin-left: 30px
 	&-content
 		display: flex
 		justify-content: flex-end
+		+r(1023)
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
 	&-bottom
 		margin-top: 29px
 		position: relative
+		+r(479)
+			margin-top: 10px
 	&-pack
 		position: absolute
-		top: 0
-		left: 0
+		bottom: -209px
+		left: 171px
+		z-index: 5
+		+r(1189)
+			bottom: -162px
+			left: 75px
+		+r(1023)
+			position: relative
+			bottom: 0
+			left: 0
+			order: 2
+		+r(639)
+			max-width: 250px
+			margin-bottom: 15px
+		&:before
+			content: ''
+			position: absolute
+			bottom: 35px;
+			left: -165px;
+			background: url(../img/fruit.png) no-repeat center
+			width: 232px
+			height: 170px
+			z-index: -1
+			+r(1023)
+				display: none
 	&-text
 		margin-right: 40px
+		+r(1023)
+			order: 1
+			width: 100%
+			margin: 0
 		&__title
 			color: #000000
 			font-size: 50px
 			font-weight: 900
 			line-height: 46px
 			margin-top: 50px
-			
+			+r(1189)
+				font-size: 42px
+				line-height: 38px
+			+r(1023)
+				font-size: 36px
+				line-height: 36px
+				text-align: center
+				margin-top: 20px
+				br
+					display: none
+			+r(767)
+				font-size: 32px
+				line-height: 32px
+				margin-top: 15px
+			+r(479)
+				margin-top: 0
+
 		&__subtitle
 			color: #000000
 			font-family: Roboto
@@ -98,9 +200,30 @@
 			font-weight: 500
 			line-height: 46px
 			margin-top: 10px
+			+r(1189)
+				font-size: 20px
 			b
 				font-weight: 700
+			+r(1023)
+				line-height: normal
+				text-align: center
+			+r(767)
+				font-size: 19px
+				line-height: normal
 	&-list
+		margin-top: 28px
+		+r(1023)
+			display: flex
+			justify-content: center
+			margin-top: 20px
+		+r(639)
+			flex-direction: column
+			justify-content: flex-start
+			max-width: 360px
+			margin-right: auto
+			margin-left: auto
+		+r(479)
+			margin-top: 10px
 		&__item
 			color: #444444
 			font-size: 19px
@@ -109,16 +232,69 @@
 			margin-bottom: 26px
 			position: relative
 			padding-left: 62px
+			+r(1189)
+				font-size: 18px
+				line-height: 22px
+				padding-left: 55px
+			+r(1023)
+				width: 32%
+				padding-left: 0
+				padding-top: 45px
+				text-align: center
+				br
+					display: none
+			+r(767)
+				width: 31%
+				margin-right: 4px
+				margin-left: 4px
+				font-size: 17px
+				line-height: normal
+				padding-top: 33px
+				margin-bottom: 20px
+			+r(639)
+				padding-top: 0
+				padding-left: 40px
+				width: 100%
+				text-align: left
+				margin: 0
+				margin-bottom: 20px
 			&:before
 				content: ''
 				width: 40px
 				height: 40px
 				background-color: #85c336
 				border-radius: 50%
-				background: url(../img/check.svg) 50% 50% no-repeat
+				background: url(../img/check.svg) 104% 38% no-repeat #85c336
 				background-color: #85c336
 				position: absolute
-				top: 0
+				top: 5px
 				left: 0
+				+r(1023)
+					left: 50%
+					top: 0
+					margin-left: -20px
+				+r(767)
+					width: 30px
+					height: 30px
+					background-size: 80%
+				+r(639)
+					left: 0
+					top: 2px
+					margin-left: 0
 			b
 				font-weight: 700
+				
+	// .form
+	// 	position: relative
+	// 	z-index: 0
+	// 	&:after
+	// 		content: ''
+	// 		top: -55px
+	// 		left: 50%
+	// 		transform: translate(-50%)
+	// 		background: url(../img/lineup.png) center no-repeat
+	// 		width: 140px
+	// 		height: 145px
+	// 		z-index: -2
+	// 	+r(1023)
+	// 		order: 3
