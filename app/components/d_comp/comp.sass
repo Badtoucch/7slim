@@ -1,18 +1,109 @@
 .comp
 	margin-top: 105px
 	margin-bottom: 122px
+	+r(1189)
+		padding: 60px 0
+	+r(767)
+		.title
+			br
+				display: none
 	&-content
 		display: flex
 		justify-content: center
 		margin-top: 50px
+		background: url(../img/comp-linebg.png) no-repeat center
+		+r(1189)
+			margin-top: 35px
+			background-size: 42%
+		+r(1023)
+			background: none
+			margin-top: 25px
+		+r(767)
+			margin-top: 15px
+		+r(479)
+			flex-direction: column
+			align-items: center
+
+	&-left
+		+r(479)
+			margin-bottom: 15px
+		&-item
+			margin-right: 20px
+			+r(1189)
+				margin-right: 10px
+			+r(767)
+				order: 2
+			
+		&__name,&__do,&__text
+			text-align: right
+			&__name
+			&:before
+				right: 0
+				left: auto !important
+				+r(767)
+					right: auto !important
+					left: 50% !important
+					transform: translateX(-50%)
+	
+			
+	&-right
+		&-item
+			margin-left: 20px
+			+r(1189)
+				margin-left: 10px
 	&-left, &-right
 		width: 415px
+		+r(1189)
+			width: 380px
+		+r(1023)
+			width: 48%
+		+r(767)
+			width: 250px
+		+r(479)
+			width: 100%
+			max-width: 320px
 		&-box
 			display: flex
+			align-items: center
+			+r(767)
+				flex-direction: column
+				justify-content: center
+				margin-left: 5px
+				margin-right: 5px
+				min-height: 197px
+				justify-content: flex-start
+			+r(479)
+				min-height: 100%
 			&:not(:last-child)
-				margin-bottom: 44px
+				margin-bottom: 30px
+				+r(1189)
+					margin-bottom: 25px
+				+r(767)
+					margin-bottom: 15px
+			&:nth-child(1)
+				margin-bottom: 45px
+				+r(1189)
+					margin-bottom: 35px
+				+r(1023)
+					align-items: flex-start
+				+r(767)
+					align-items: center
+					margin-bottom: 15px
+
+				
 		&-item
 			width: 265px
+			+r(1189)
+				width: 238px
+			+r(1023)
+				width: 215px
+			+r(767)
+				width: 100%
+				margin-top: 10px
+				margin-right: 0
+				margin-left: 0
+				br
+					display: none
 		&__img
 			width: 128px
 			height: 128px
@@ -20,6 +111,11 @@
 			background-color: #85c336
 			border-radius: 50%
 			overflow: hidden
+			+r(1023)
+				width: 106px
+				height: 106px
+			
+				
 		&__name
 			color: #6ba423
 			font-size: 18px
@@ -28,6 +124,14 @@
 			font-style: italic
 			position: relative
 			padding-bottom: 15px
+			+r(1189)
+				font-size: 17px
+				padding-bottom: 10px
+			+r(1023)
+				font-size: 16px
+				padding-bottom: 5px
+			+r(767)
+				text-align: center
 			&:before
 				content: ''
 				position: absolute
@@ -36,12 +140,30 @@
 				width: 30px
 				height: 5px
 				background-color: #fc8a1c
+				+r(1189)
+					height: 4px
+				+r(1023)
+					height: 3px
+				+r(767)
+					left: 50%
+					transform: translateX(-50%)
 		&__do
 			color: #000000
 			font-size: 22px
 			font-weight: 700
 			line-height: 28px
-			margin-top: 5px
+			margin-top: 7px
+			+r(1189)
+				font-size: 20px
+				line-height: normal	
+				margin-top: 3px
+			+r(1023)
+				font-size: 18px
+				margin-top: 0
+			+r(767)
+				text-align: center
+			+r(639)
+				font-size: 17px
 		&__text
 			color: #444444
 			font-family: Roboto
@@ -49,5 +171,24 @@
 			font-weight: 400
 			line-height: 26px
 			margin-top: 5px
+			+r(1189)
+				font-size: 17px
+				line-height: 25px
+			+r(1023)
+				font-size: 16px
+				line-height: normal
+				margin-top: 0
+			+r(767)
+				text-align: center
+				
 	&-pack
 		width: 320px
+		display: flex
+		align-items: center
+		margin-left: 15px
+		position: relative
+		margin-right: -5px
+		+r(1189)
+			margin-left: 0
+		+r(1023)
+			display: none
