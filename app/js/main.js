@@ -2,7 +2,11 @@
 //=include ../components/footer/footer.js
 
 
-
+(function($){
+	$(window).on("load",function(){
+			$(".doct-content-boxyText").mCustomScrollbar();
+	});
+})(jQuery);
 
 
 

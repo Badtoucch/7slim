@@ -261,13 +261,7 @@ input::-ms-clear
 .orange
 	color: #fc8a1c
 
-.form-wrap
-	padding: 20px;
-	width: 310px;
-	height: 620px;
-	overflow: hidden;
 
-	box-sizing: border-box;
 .form
 
 
@@ -421,39 +415,22 @@ input::-ms-clear
 
 .form
 	width: 270px
-	
-	height: 563px
-	background: #fff
-	margin: 0px auto
-	border-radius: 10px
+	// box-shadow: 0 0 35px rgba(134, 147, 162, 0.25)
+	// border-radius: 10px
+	// border: 4px solid #b2c88b
+	// background-color: #ffffff
 	position: relative
-	box-shadow: 0 0 35px rgba(134, 147, 162, 0.25)
-	border: 4px solid #85c336
-	box-sizing: border-box
 	z-index: 0
 	&:before
 		content: ''
 		position: absolute
-		top: -180px
-		left: -195px
-		background: linear-gradient(to bottom, #E7F2E9 20%, #F3EAE8 80%)
-		height: 800px
-		width: 200px
-		border: 5px solid #85c336
-		border-radius: 200px/800px
-		clip-path: polygon(80% 23%, 100% 23%, 100% 77%, 80% 75%)
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		width: 340px
+		height: 611px
+		background: url(../img/form.png) no-repeat center
 		z-index: -1
-	&:after
-		content: ''
-		position: absolute
-		top: -180px
-		right: -195px
-		background: linear-gradient(to bottom, #E7F2E9 20%, #F3EAE8 80%)
-		height: 800px
-		width: 200px
-		border: 5px solid #85c336
-		border-radius: 200px/800px
-		clip-path: polygon(0% 23%, 20% 23%, 23% 76%, 0% 76%)
 	.price
 		margin-top: 18px
 	&-title
@@ -471,10 +448,10 @@ input::-ms-clear
 		line-height: 26px
 
 	&-bg
-		background-color: #f0f3ed
+		// background-color: #f0f3ed
 		padding: 18px 20px 0
 		position: relative
-		z-index: -2
+		z-index: 0
 		width: 100%
 		box-sizing: border-box
 		border-radius: 10px 10px 0px 0px
@@ -485,7 +462,7 @@ input::-ms-clear
 			left: 0
 			bottom: -147px
 			border: 131px solid transparent
-			border-top: 17px solid #f0f3ed
+			// border-top: 17px solid #f0f3ed
 
 	&-packCount
 		color: #000000
@@ -580,8 +557,8 @@ input::-ms-clear
 		margin-top: 12px
 		font-size: 15px
 		color: #1f1f1f
-		background-color: #ffffff
-		box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.04)
+		// background-color: #ffffff
+		// box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.04)
 		position: relative
 		text-align: center
 		border-radius: 0px 0px 10px 10px
@@ -595,17 +572,17 @@ input::-ms-clear
 			left: 25px
 			top: 13px
 
-	// &:after
-	// 	content: ''
-	// 	width: 53px
-	// 	height: 296px
-	// 	background-image: url(../img/form-arrow.svg)
-	// 	background-size: 100% 100%
-	// 	position: absolute
-	// 	right: -38px
-	// 	top: 133px
-	// 	+r(1255)
-	// 		display: none
+	&:after
+		content: ''
+		width: 53px
+		height: 296px
+		background-image: url(../img/form-arrow.svg)
+		background-size: 100% 100%
+		position: absolute
+		right: -38px
+		top: 133px
+		+r(1255)
+			display: none
 	.info-price
 		margin-top: 13px
 
