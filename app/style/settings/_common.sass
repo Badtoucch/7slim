@@ -208,6 +208,9 @@ input
 input::-ms-clear
 	display: none
 
+
+	
+
 .container
 	width: 100%
 	margin: 0 auto
@@ -224,9 +227,9 @@ input::-ms-clear
 		width: 1190px
 
 .title
-	font-size: 44px
 	color: #000000
 	font-family: Roboto
+	font-size: 44px
 	font-weight: 700
 	line-height: 44px
 	text-align: center
@@ -258,14 +261,10 @@ input::-ms-clear
 .orange
 	color: #fc8a1c
 
-.form-wrap
-	padding: 20px
-	//width: 310px
-	height: 620px
-	overflow: hidden
-	box-sizing: border-box
 
 .form
+
+
 	&-title
 		color: #000000
 		font-size: 23px
@@ -415,33 +414,13 @@ input::-ms-clear
 				font-size: 18px
 
 .form
-	width: 286px
-	height: 555px
-	background: #fff
-	margin: 0px auto
-	border-radius: 10px
+	width: 270px
+	// box-shadow: 0 0 35px rgba(134, 147, 162, 0.25)
+	// border-radius: 10px
+	// border: 4px solid #b2c88b
+	// background-color: #ffffff
 	position: relative
-	box-shadow: 0 0 7px rgba(134, 147, 162, 0.25)
-	border: 4px solid #85c336
-	box-sizing: border-box
-	z-index: auto
-	&:before
-		content: ''
-		position: absolute
-		top: -220px
-		left: -196px
-		background: #e8f7ea
-		height: 976px
-		width: 200px
-		border: 5px solid #85c336
-		border-radius: 200px/885px
-		clip-path: polygon(80% 25%, 100% 23%, 100% 77%, 80% 75%)
-		z-index: 1
-	&:after
-		content: ''
-		width: 270px
-		position: relative
-		z-index: 0
+	z-index: 0
 	&:before
 		content: ''
 		position: absolute
@@ -481,12 +460,12 @@ input::-ms-clear
 			content: ''
 			position: absolute
 			left: 50%
-			margin-left: -142px
-			top: 0
-			background: url(../img/form-bg.svg) no-repeat center
-			background-size: 284px 231px
+			margin-left: -143px
+			top: 0px
+			background: url(../img/form-bg.png) center no-repeat
 			width: 284px
 			height: 231px
+			background-size: 98.5%
 			z-index: -1
 	&-packCount
 		color: #000000
@@ -586,13 +565,12 @@ input::-ms-clear
 		position: relative
 		text-align: center
 		border-radius: 0px 0px 10px 10px
-		z-index: -1
 
 		&:before
 			content: ''
 			width: 22px
 			height: 19px
-			background-image: url(../gulpimg/coins.svg)
+			background-image: url(../img/coins.svg)
 			position: absolute
 			left: 25px
 			top: 13px
