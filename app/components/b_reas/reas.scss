@@ -11,7 +11,7 @@
     width: 100%;
     bottom: -52px;
     transform: rotate(180deg);
-
+    z-index: 1;
   }
   &__icon{
     background: #e03954;
@@ -159,9 +159,6 @@
 
 @media (max-width: 1189px) {
   .reason{
-    &:after{
-      display: none;
-    }
     &__wrap{
       margin: 16px 0 13px;
       &--item{
@@ -195,6 +192,9 @@
 
 @media (max-width: 1023px) {
   .reason {
+    &:after{
+      display: none;
+    }
     &__wrap {
       &--item {
         background: #ffffff;

@@ -1,6 +1,18 @@
 .give{
   background: linear-gradient(to top,rgba(224,57,84,.13) 0,rgba(222,217,165,.13) 48%,rgba(45,182,77,.13) 100%);
-  padding: 86px 0 47px;
+  padding: 86px 0 0;
+  position: relative;
+  &:after{
+    background: url("../img/bg-line2.png") center;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    bottom: 0px;
+    z-index: 2;
+    transform: rotate(180deg);
+  }
   &__wrap{
     display: flex;
   }
@@ -56,9 +68,13 @@
     width: 260px;
   }
 }
-
+.girl{
+  position: relative;
+  top: 6px;
+}
 @media (max-width: 1189px) {
   .give{
+    overflow: hidden;
     &__wrap{
       align-items: flex-start;
     }
@@ -69,7 +85,7 @@
   .girl{
     width: 250px;
     position: relative;
-    top: 62px;
+    top: 12px;
     z-index: 0;
   }
 }
@@ -79,6 +95,9 @@
     display: none;
   }
   .give{
+    &:after{
+      display: none;
+    }
     &__wrap{
       align-items: flex-start;
       justify-content: center;
