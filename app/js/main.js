@@ -9,9 +9,68 @@
 })(jQuery);
 
 
+$('.rev-top').slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	fade: true,
+	dots: false,
+	arrows: false,
+	asNavFor: '.rev-mid, .rev-bottom',
+	adaptiveHeight: true,
+	touchMove: false,
+	responsive: [{
+		breakpoint: 1024,
+		settings: {
+			slidesToShow: 1
 
+		}
+	}]
+});
 
+ $('.rev-bottom').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    dots: false,
+    arrows: false,
+		adaptiveHeight: true,
+		asNavFor: '.rev-mid, .rev-top',
+    touchMove: false,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1
 
+      }
+    }]
+  });
+
+  $('.rev-mid').slick({
+    infinite: true,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+		arrows: true,
+		variableWidth: true,
+  
+    centerMode: true,
+		focusOnSelect: true,
+		cssEase: 'ease-in',
+		speed: '500',
+		asNavFor: '.rev-top, .rev-bottom',
+    dots: false,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        adaptiveHeight: true,
+        centerMode: true
+      }
+    }]
+  });
 
 
 
