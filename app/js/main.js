@@ -55,7 +55,7 @@ $('.rev-mid').slick({
     centerMode: true,
     focusOnSelect: true,
     cssEase: 'ease-in',
-    speed: '100',
+    speed: '500',
     asNavFor: '.rev-top, .rev-bottom',
     dots: false,
     responsive: [{
@@ -68,108 +68,7 @@ $('.rev-mid').slick({
             centerMode: true
         }
     }]
-<<<<<<< HEAD
-  });
-
-
-
-	$('.btn-review').click(function () {
-    var reviewInput1 = $('.input__val-1').val().length,
-      reviewInput3 = $('.input__val-3').val().length;
-    if (reviewInput1 !== 0 && reviewInput3 !== 0) {
-      $('.input__val-1').val("");
-      $('.input__val-3').val("");
-      $('.popup__review').addClass('active');
-      $('.popup__review').click(function () {
-        $(this).removeClass('active');
-      });
-    } else {
-      alert('Заполните поля');
-    }
-  });
-
-  $('.review__file-trigger').on('click', function () {
-    $('.answer__file').click();
-  });
-
-  $('.answer__file').on('change', function () {
-    var name = $(this)[0].value.split('\\');
-    var filesName = name[name.length - 1];
-    // $('.file-name').text('Hoi');
-    alert('Ваш файл ' + filesName + ' загружен');
-  });
-
-	$(document).ready(function(){
-    $('.header-links__item a').click( function(){ 
-	var scroll_el = $(this).attr('href'); 
-        if ($(scroll_el).length != 0) { 
-	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1000); 
-        }
-	    return false; 
-    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-});
->>>>>>> 8ed999d81edbe82b3bc5a9401e21ca65968a595d
 
 
 //postdate
