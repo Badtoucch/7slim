@@ -106,7 +106,7 @@
 			justify-content: flex-end
 			align-items: flex-end
 		&-pack,&-dt,&-sp
-			height: 89%
+			height: 312px
 			background-image: linear-gradient(to top, #6ba423 0%, #92ca4a 100%)
 			width: 77px
 			color: #ffffff
@@ -114,7 +114,7 @@
 			font-size: 24px
 			font-weight: 500
 			line-height: 1
-			display: flex
+			display: flex !important
 			justify-content: center
 			align-items: center
 			position: relative
@@ -130,12 +130,12 @@
 				width: 100%
 		&-dt
 			background-image: linear-gradient(to top, #fcac1a 0%, #ffd892 100%)
-			height: 36%
+			height: 124px
 			&:before
 				background: rgba(252, 203, 71, 0.1)
 		&-sp
 			background-image: linear-gradient(to top, #fc8a1c 0%, #feaa59 100%)
-			height: 32%
+			height: 114px
 			&:before
 				background: rgba(252, 144, 39, 0.1)
 		&-boxname
@@ -171,7 +171,11 @@
 		z-index: 0
 		+r(1023)
 			margin-top: 25px
+			margin-bottom: 10px
+		+r(767)
+			margin-bottom: 15px
 		+r(479)
+			margin-top: 0px
 			width: 301px
 			height: 439px
 		&:before

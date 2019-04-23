@@ -1,0 +1,84 @@
+.ever-popup__inner
+	max-width: 100% !important
+	
+.pop-up
+	padding-left: 10px
+	padding-right: 10px
+	
+	.form:after
+		display: none
+.pop-up__box
+
+	box-sizing: border-box
+	width: 730px
+	height: 615px
+	border-radius: 3px
+	background-color: #edf4ed
+	max-width: 100%
+	padding: 15px 15px
+	+r(850)
+		padding: 0
+		padding-top: 5px
+		background: none
+		width: 270px
+		height: auto
+.popup-title
+	text-align: center
+	font-size: 40px
+	h3, h2
+		margin: 0
+
+.pop-up__content
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	-ms-align-items: center
+	align-items: center
+
+.image-pack
+	position: relative
+	+r(850)
+		display: none
+	img
+		display: inline-block
+		max-width: 100%
+		max-height: 400px
+		position: absolute
+		top: 18px
+		right: -20px
+	&:before
+		content: ''
+		position: absolute
+		bottom: -316px
+		left: -64px
+		background: url(../img/popup-girl.png) no-repeat center
+		width: 413px
+		height: 594px
+
+.pop-up__left
+	flex: 1
+	text-align: center
+	min-width: 250px
+
+.form-box1 > *
+	float: none !important
+	margin: 0 !important
+
+.form-box
+	margin-top: 15px
+	margin-right: 55px
+	+r(850)
+		margin-top: 0
+		margin-right: 0
+
+		
+@media screen and (min-width: 851px)
+	.ever-popup__close:after, .ever-popup__close:before
+		background-color: #fc8a1c !important
+		width: 30px !important
+		height: 3px !important
+	.ever-popup__close
+		top: 15px !important
+		right: 22px !important
+	.ever-popup__inner
+		padding-top: 0 !important

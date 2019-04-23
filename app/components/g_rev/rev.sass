@@ -1,5 +1,5 @@
 .rev
-	padding: 164px 0 123px
+	padding: 154px 0 110px
 	background: linear-gradient(to top,rgba(224,57,84,.13) 0,rgba(222,217,165,.13) 48%,rgba(45,182,77,.13) 100%)
 	position: relative
 	&:before
@@ -31,6 +31,9 @@
 			padding: 0 50px
 		+r(1023)
 			padding: 0 40px
+			margin-top: 20px
+		+r(767)
+			margin-top: 10px
 		+r(400)
 			padding: 0 10px
 	&-top
@@ -102,6 +105,9 @@
 			display: block
 			margin-right: auto
 			margin-left: auto
+			+r(767)
+				font-size: 17px
+				line-height: normal
 	.slick-center
 		.rev-mid__img	
 			border: 4px solid #6ba423
@@ -169,3 +175,212 @@
 			font-size: 0
 		&:hover
 			background: url(../img/rev-arrow-21.png) no-repeat center
+
+.rev-send-title
+	color: #222222
+	font-family: Roboto
+	font-size: 22px
+	font-weight: 500
+	line-height: 23.95px
+	text-align: center
+	margin-top: 36px
+	padding-top: 30px
+	border-top: 1px solid #d9d9d9
+	margin-bottom: 10px
+	+r(1189)
+		font-size: 21px
+		margin-top: 30px
+		padding-top: 25px
+		margin-bottom: 5px
+	+r(1023)
+		font-size: 19px
+		margin-top: 25px
+		padding-top: 20px
+		margin-bottom: 0
+		br
+			display: none
+	+r(767)
+		font-size: 18px
+		margin-top: 20px
+		padding-top: 15px
+
+.form__main-input_name
+	background-image: url(../img/user.svg)
+	background-repeat: no-repeat
+	background-position: 25px 23px
+	+r(767)
+		background-position: 25px 17px
+
+.reviews__review
+	width: 100%
+
+	display: flex
+ align-items: center
+
+	padding-top: 19px
+	padding-bottom: 19px
+
+	z-index: 5
+	+r(1023)
+		flex-wrap: wrap
+		padding-bottom: 0
+		padding-top: 15px
+	+r(767)
+		justify-content: center
+		align-items: center
+		flex-direction: column
+.rev
+	.input__val
+		width: 280px
+		height: 71px
+		border-radius: 5px
+		background-color: #ffffff
+		border: none
+		padding-left: 54px
+		+r(1023)
+			width: 250px
+		+r(767)
+			width: 100%
+			max-width: 380px
+			height: 60px
+		+r(479)
+			width: 280px
+			max-width: 280px
+		&::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
+			color: #666666
+			font-weight: 400
+			font-size: 16px
+	.input__text
+		width: 610px
+		padding: 0 30px
+		margin: 0 20px
+		+r(1189)
+			width: 380px
+		+r(1023)
+			margin-right: 0
+			width: 397px
+		+r(767)
+			width: 380px
+			max-width: 380px
+			margin-top: 15px
+			margin-left: 0
+			height: 60px
+		+r(479)
+			width: 280px
+			max-width: 280px
+	.answer__file
+		display: none
+	.answer__plus
+		position: absolute
+		width: 24px
+		height: 27px
+		right: 41px
+		top: 0
+		bottom: 0
+		margin: auto
+		cursor: pointer
+		+r(1023)
+			right: 20px
+		+r(767)
+			top: 15px
+	.answer__input-wrapper
+		position: relative
+		display: inline-block
+
+.form__main-input_phone_reviews
+	margin-top: 0
+
+.form__main-button_reviews
+	margin-top: 0
+	width: 240px
+	line-height: 1
+	cursor: pointer
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	+r(1023)
+		margin-top: 15px
+
+.popup__review
+	display: none
+	&.active
+		display: block
+		width: 100%
+		height: 100%
+		position: fixed
+		background-color: rgba(0, 0, 0, 0.6)
+		top: 0
+		left: 0
+		z-index: 50
+	.review__inner
+		text-align: center
+		width: 730px
+		height: 242px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		border-radius: 3px
+		background-color: #edf4ed
+		color: #444444
+		z-index: 11
+		padding: 10px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		+r(1023)
+			max-width: 540px
+			height: 170px
+		+r(560)
+			width: 300px
+			height: auto
+			padding-top: 20px
+			padding-bottom: 20px
+	.close
+		cursor: pointer
+		position: absolute
+		top: 5px
+		right: 5px
+		width: 25px
+		height: 25px
+		&:before, &:after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) rotate(45deg)
+			height: 3px
+			width: 100%
+			background-color: #fc8a1c
+			border-radius: 50px
+		&:after
+			transform: translate(-50%, -50%) rotate(-45deg)
+	.review__title
+		color: #000000
+		font-size: 36px
+		font-weight: 700
+		line-height: 36px
+		+r(1023)
+			font-size: 28px
+			line-height: normal
+		+r(560)
+			font-size: 20px
+
+	.review__p
+		color: #666666
+		font-size: 20px
+		font-weight: 400
+		line-height: normal
+		margin-top: 17px
+		+r(1023)
+			font-size: 18px
+			margin-top: 12px
+		+r(560)
+			font-size: 16px
+			margin-top: 5px
+@media screen and (max-width: 1023px)
+	.reviews .answer__plus
+		top: 11px
+

@@ -456,17 +456,17 @@ input::-ms-clear
 		box-sizing: border-box
 		border-radius: 10px 10px 0px 0px
 		z-index: 0
-		&::after
-			// content: ''
-			// position: absolute
-			// left: 50%
-			// margin-left: -143px
-			// top: 0px
-			// background: url(../img/form-bg.png) center no-repeat
-			// width: 284px
-			// height: 231px
-			// background-size: 98.5%
-			// z-index: -1
+		&:after
+			content: ''
+			width: 53px
+			height: 296px
+			background-image: url(../img/form-arrow.svg)
+			background-size: 100% 100%
+			position: absolute
+			right: -38px
+			top: 133px
+			+r(1255)
+				display: none
 	&-packCount
 		color: #000000
 		text-align: center
@@ -533,8 +533,8 @@ input::-ms-clear
 		height: 70px
 		border-radius: 5px
 		background-color: #ffffff
-		background-image: linear-gradient(to right, #ff8900 0%, #f68b4a 51%, #ff8900 100%)
-		transition: background-position 0.5s,box-shadow 0.5s
+		background-image: linear-gradient(to right, #ff8900 0%, #f68b4a 26%, #ff8900 50%, #ff6600 52%, #f68b4a 76%, #ff6600 104%)
+		background-size: 206% auto
 		margin-top: 16px
 		font-size: 27px
 		font-weight: 900
@@ -547,7 +547,9 @@ input::-ms-clear
 		margin-right: auto
 		margin-left: auto
 		&:hover
+			background-position: 100% 0
 			box-shadow: none
+			border-bottom: 5px solid #ce6813
 
 	&__btn_size
 		font-size: 20px
@@ -565,7 +567,15 @@ input::-ms-clear
 		position: relative
 		text-align: center
 		border-radius: 0px 0px 10px 10px
-
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.04)
+			height: 5px
+			width: 280px
 		&:before
 			content: ''
 			width: 22px
@@ -575,21 +585,13 @@ input::-ms-clear
 			left: 25px
 			top: 13px
 
-	&:after
-		content: ''
-		width: 53px
-		height: 296px
-		background-image: url(../img/form-arrow.svg)
-		background-size: 100% 100%
-		position: absolute
-		right: -38px
-		top: 133px
-		+r(1255)
-			display: none
+	
 	.info-price
 		margin-top: 13px
 
 .form-bottom
+	position: relative
+	
 	.price-new__title
 		color: #30302f
 		font-size: 14px

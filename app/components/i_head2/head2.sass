@@ -1,0 +1,29 @@
+.sell
+	padding-top: 15px
+	&:before
+		content: ''
+		position: absolute
+		left: 50%
+		top: 0
+		background: url(../img/bg-line2.png) center repeat-x
+		width: 100%
+		height: 70px
+		-webkit-transform: translateX(-50%)
+		transform: translateX(-50%)
+	.header-pack
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: 133px
+			background: url(../img/girl.png) center no-repeat
+			width: 473px
+			height: 691px
+			transform: translateX(-80%)
+			z-index: -2
+			+r(1023)
+				display: none
+	.header-text__title,.header-bottom
+		+r(1023)
+			margin-top: 0
+	
