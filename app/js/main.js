@@ -1,75 +1,74 @@
-
 //=include ../components/footer/footer.js
 
 
-(function($){
-	$(window).on("load",function(){
-			$(".doct-content-boxyText").mCustomScrollbar();
-	});
+(function ($) {
+    $(window).on("load", function () {
+        $(".doct-content-boxyText").mCustomScrollbar();
+    });
 })(jQuery);
 
 
 $('.rev-top').slick({
-	infinite: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	fade: true,
-	dots: false,
-	arrows: false,
-	asNavFor: '.rev-mid, .rev-bottom',
-	adaptiveHeight: true,
-	touchMove: false,
-	responsive: [{
-		breakpoint: 1024,
-		settings: {
-			slidesToShow: 1
-
-		}
-	}]
-});
-
- $('.rev-bottom').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
     dots: false,
     arrows: false,
-		adaptiveHeight: true,
-		asNavFor: '.rev-mid, .rev-top',
+    asNavFor: '.rev-mid, .rev-bottom',
+    adaptiveHeight: true,
     touchMove: false,
     responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1
 
-      }
+        }
     }]
-  });
+});
 
-  $('.rev-mid').slick({
+$('.rev-bottom').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    dots: false,
+    arrows: false,
+    adaptiveHeight: true,
+    asNavFor: '.rev-mid, .rev-top',
+    touchMove: false,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1
+
+        }
+    }]
+});
+
+$('.rev-mid').slick({
     infinite: true,
     slidesToShow: 7,
     slidesToScroll: 1,
-		arrows: true,
-		variableWidth: true,
-  
+    arrows: true,
+    variableWidth: true,
     centerMode: true,
-		focusOnSelect: true,
-		cssEase: 'ease-in',
-		speed: '500',
-		asNavFor: '.rev-top, .rev-bottom',
+    focusOnSelect: true,
+    cssEase: 'ease-in',
+    speed: '100',
+    asNavFor: '.rev-top, .rev-bottom',
     dots: false,
     responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        infinite: true,
-        adaptiveHeight: true,
-        centerMode: true
-      }
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            adaptiveHeight: true,
+            centerMode: true
+        }
     }]
+<<<<<<< HEAD
   });
 
 
@@ -168,15 +167,18 @@ $('.rev-top').slick({
 
 
 
+=======
+});
+>>>>>>> 8ed999d81edbe82b3bc5a9401e21ca65968a595d
 
 
 //postdate
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-	// Вивід дати (+ час). Argument: Date_format (string). Default: 'dd.mm.yyyy'
-    postDate(/*'dd month yyyy'*/); 		
+    // Вивід дати (+ час). Argument: Date_format (string). Default: 'dd.mm.yyyy'
+    postDate(/*'dd month yyyy'*/);
 
 });
 
@@ -195,8 +197,8 @@ function postDate(sa) {
         months, countryName = 'ru',  // Мова для місяців. 
         isAbbreviated = false, // Якщо потрібно скорочений варіант місяців з трьох букв, наприклад "янв", "июн", тоді ставим TRUE.
         localDate = new Date();
-                                   
-    switch(countryName) {
+
+    switch (countryName) {
         case 'it':  // Italy
             months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
             break;
@@ -248,8 +250,8 @@ function postDate(sa) {
 
         timeArray = timeFormat(timeArray);
 
-        for(var i = 0; i < nodeList.length; i++) {
-            var data = window.navigator.userAgent.indexOf("MSIE") > 0 ? { format: nodeList[i].getAttribute("data-format") } : nodeList[i].dataset;
+        for (var i = 0; i < nodeList.length; i++) {
+            var data = window.navigator.userAgent.indexOf("MSIE") > 0 ? {format: nodeList[i].getAttribute("data-format")} : nodeList[i].dataset;
 
             if (data.format) {
                 nodeList[i].innerHTML = format(date, data.format);
@@ -265,7 +267,7 @@ function postDate(sa) {
             if (/\btime\b/.test(nodeList[i].className)) {
                 nodeList[i].innerHTML += " " + timeArray[timeCounter]; // Рядок для формату виводу часу.
                 timeCounter++;
-            } 
+            }
         }
     }
 
@@ -278,7 +280,7 @@ function postDate(sa) {
             date = new Date(localDate.getTime() + counter * msInDay),
             timeCounter = 0;
 
-        for(var i = 0; i < nodeList.length; i++) {
+        for (var i = 0; i < nodeList.length; i++) {
             var data = nodeList[i].dataset;
 
             if (data.format) {
@@ -290,32 +292,35 @@ function postDate(sa) {
     }
 
 
-
     function time(nodeList, reverse) {
         var timeArray = [], timeStatement = false;
 
         for (var i = 0; i < nodeList.length; i++) {
             if (nodeList[i].className.match(/\btime\b/)) {
-            	if (nodeList[i].className.match(/\bdate-0\b/)) {
-            		timeStatement = true;
-            	}
+                if (nodeList[i].className.match(/\bdate-0\b/)) {
+                    timeStatement = true;
+                }
                 timeArray.push(timeRandom(timeStatement));
             }
         }
 
-        if (reverse) timeArray.sort(function(a, b) { return b - a; });
-        else timeArray.sort(function(a, b) { return a - b; });
+        if (reverse) timeArray.sort(function (a, b) {
+            return b - a;
+        });
+        else timeArray.sort(function (a, b) {
+            return a - b;
+        });
 
         return timeArray;
-    } 
+    }
 
     function timeRandom(statement) {
-    	if (statement) {
-    		var date = new Date(),
-    			timeLimit = date.getHours() * 60 + date.getMinutes();
+        if (statement) {
+            var date = new Date(),
+                timeLimit = date.getHours() * 60 + date.getMinutes();
 
-    		return Math.round(0 + Math.random() * timeLimit);
-    	}
+            return Math.round(0 + Math.random() * timeLimit);
+        }
         return Math.round(0 + Math.random() * 1440);
     }
 
@@ -323,12 +328,12 @@ function postDate(sa) {
         var array = [];
 
         for (var i = 0; i < timearray.length; i++) {
-        var htemp = Math.floor(timearray[i] / 60), mtemp = timearray[i] % 60,
-            hours = htemp < 10 ? "0" + htemp : htemp,
-            minutes = mtemp < 10 ? "0" + mtemp : mtemp; 
-        array.push(hours + ":" + minutes);  
+            var htemp = Math.floor(timearray[i] / 60), mtemp = timearray[i] % 60,
+                hours = htemp < 10 ? "0" + htemp : htemp,
+                minutes = mtemp < 10 ? "0" + mtemp : mtemp;
+            array.push(hours + ":" + minutes);
         }
-        
+
 
         return array;
     }
@@ -341,27 +346,27 @@ function postDate(sa) {
             fo = formatstring || true;
 
         switch (fo) {
-            case "mm.dd.yyyy": 
+            case "mm.dd.yyyy":
                 innerDate += (month < 10) ? ("0" + month) : month;
                 innerDate += ".";
                 innerDate += (day < 10) ? ("0" + day) : day;
                 innerDate += "." + year;
-                return innerDate;            
+                return innerDate;
 
-            case "dd month yyyy": 
+            case "dd month yyyy":
                 innerDate += (day < 10) ? ("0" + day) : day;
                 innerDate += " ";
                 innerDate += months[month - 1];
                 innerDate += " " + year;
-                return innerDate;      
+                return innerDate;
 
-            case "dd month": 
+            case "dd month":
                 innerDate += (day < 10) ? ("0" + day) : day;
                 innerDate += " ";
                 innerDate += months[month - 1];
                 return innerDate;
 
-            case "day dd, month yyyy": 
+            case "day dd, month yyyy":
                 var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
                 innerDate += days[new Date(year, month - 1, day).getDay()];
                 innerDate += " ";
@@ -384,8 +389,8 @@ function postDate(sa) {
                 innerDate += (month < 10) ? ("0" + month) : month;
                 innerDate += "-" + year;
                 return innerDate;
-            
-            default: 
+
+            default:
                 innerDate += (day < 10) ? ("0" + day) : day;
                 innerDate += ".";
                 innerDate += (month < 10) ? ("0" + month) : month;
