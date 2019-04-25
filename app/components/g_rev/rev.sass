@@ -67,8 +67,7 @@
 	&-mid
 		margin-bottom: 16px
 		&-item
-			margin-right: 20px
-			margin-left: 20px
+			
 			height: 205px
 			display: flex !important
 			align-items: center
@@ -129,26 +128,14 @@
 			opacity: 1
 			max-width: 179px
 		&.rev-mid-item
-			margin-right: 35px
-			margin-left: 35px
-			+r(1189)
-				margin-right: 35px
-				margin-left: 35px
-			+r(1023)
-				margin-right: 10px
-				margin-left: 10px
-			+r(767)
-				margin-right: 25px
-				margin-left: 25px
-			+r(639)
-				margin-right: 75px
-				margin-left: 75px
+			
 	.slick-next
 		width: 40px
 		height: 28px
 		background: url(../img/rev-arrow-12.png) no-repeat center
 		font-size: 0
 		right: -60px
+		transition: all 0.2s
 		+r(1255)
 			right: -30px
 		+r(1023)
@@ -159,12 +146,15 @@
 			font-size: 0
 		&:hover
 			background: url(../img/rev-arrow-22.png) no-repeat center
+			width: 50px;
+			height: 38px;
 	.slick-prev
 		width: 40px
 		height: 28px
 		left: -60px
 		background: url(../img/rev-arrow-11.png) no-repeat center
 		font-size: 0
+		transition: all 0.2s
 		+r(1255)
 			left: -30px
 		+r(1023)
@@ -175,6 +165,8 @@
 			font-size: 0
 		&:hover
 			background: url(../img/rev-arrow-21.png) no-repeat center
+			width: 50px
+			height: 38px
 
 .rev-send-title
 	color: #222222
