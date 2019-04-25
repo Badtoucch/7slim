@@ -1,6 +1,7 @@
+
 .reason{
   background: #fff;
-  padding: 20px 0 65px;
+  padding: 32px 0 65px;
   position: relative;
   &:after{
     background: url("../img/bg-line.png") center;
@@ -46,7 +47,7 @@
 
   }
   &__arrow{
-    background: url(../img/reason__hr.svg) center no-repeat;
+    background: url(../img/reason__hr.png) center no-repeat;
     height: 16px;
     width: 100%;
     background-size: contain;
@@ -56,6 +57,7 @@
     flex-direction: column;
     align-items: center;
     margin: 15px 0 0;
+    width: 100%;
   }
   &__number{
     display: flex;
@@ -86,6 +88,7 @@
     padding: 18px 0 0;
     margin: 20px 0 0;
     position: relative;
+    width: 100%;
     &:before{
       content: '';
       display: block;
@@ -116,7 +119,7 @@
       font-size: 48px;
       color: #e8eae5;
       font-weight: 900;
-      margin: 0 0 -24px;
+      margin: 0 0 -19px;
     }
     &--icon{
       background: #85c336;
@@ -150,6 +153,7 @@
       text-align: center;
       line-height: 26px;
       padding: 5px 13px;
+      width: 100%;
     }
   }
   &__title{
