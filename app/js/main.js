@@ -53,6 +53,7 @@ $('.rev-mid').slick({
     arrows: true,
     variableWidth: true,
     centerMode: true,
+    centerPadding: '0px',
     focusOnSelect: true,
     cssEase: 'ease-in',
     speed: '500',
