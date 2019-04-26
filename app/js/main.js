@@ -50,7 +50,6 @@ $('.rev-mid').slick({
 	centerMode: true,
 	infinite: true,
 	centerPadding: '0px',
-	variableWidth: true,
 	slidesToShow: 7,
 	asNavFor: '.rev-top, .rev-bottom',
 	responsive: [
