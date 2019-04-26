@@ -16,6 +16,17 @@
 	background-color: #edf4ed
 	max-width: 100%
 	padding: 15px 15px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		bottom: -0.3px
+		left: -49px
+		background: url(../img/popup-girl.png) no-repeat center
+		width: 413px
+		height: 594px
+		+r(850)
+			background: none
 	+r(850)
 		padding: 0
 		padding-top: 5px
@@ -46,14 +57,7 @@
 		position: absolute
 		top: 18px
 		right: -20px
-	&:before
-		content: ''
-		position: absolute
-		bottom: -316px
-		left: -64px
-		background: url(../img/popup-girl.png) no-repeat center
-		width: 413px
-		height: 594px
+	
 
 .pop-up__left
 	flex: 1
@@ -82,3 +86,8 @@
 		right: 22px !important
 	.ever-popup__inner
 		padding-top: 0 !important
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	body,.ever-popup.show
+		overflow-y: hidden

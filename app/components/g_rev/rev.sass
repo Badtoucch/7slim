@@ -67,7 +67,8 @@
 	&-mid
 		margin-bottom: 16px
 		&-item
-			
+			margin-right: 20px
+			margin-left: 20px
 			height: 205px
 			display: flex !important
 			align-items: center
@@ -128,7 +129,8 @@
 			opacity: 1
 			max-width: 179px
 		&.rev-mid-item
-			
+			margin-right: 40px
+			margin-left: 40px
 	.slick-next
 		width: 40px
 		height: 28px
@@ -333,10 +335,13 @@
 	.close
 		cursor: pointer
 		position: absolute
-		top: 5px
-		right: 5px
-		width: 25px
-		height: 25px
+		top: 15px
+		right: 15px
+		width: 28px
+		height: 28px
+		+r(560)
+			top: 5px
+			right: 5px
 		&:before, &:after
 			content: ''
 			position: absolute

@@ -116,7 +116,12 @@
     }
     &__list{
       margin: 18px 0 0;
-    }
+		}
+		&__btn{
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
   }
 }
 
