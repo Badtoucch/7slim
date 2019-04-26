@@ -285,3 +285,28 @@
     }
   }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.usod__wrap--item{
+		background: none;
+		box-shadow: 0 0 35px rgba(134, 147, 162, 0.25);
+		background-color: #ffffff;
+		width: 370px;
+		padding: 20px 20px 25px;
+		height: 100%;
+		&:nth-child(1){
+			padding-bottom:55px;
+		}
+	}
+	.reason__wrap .center{
+		margin: 0 30px;
+	}
+	:nth-child(2).usod__wrap--item{
+		height: auto;
+		background: none;
+		margin: 0 30px;
+	}
+	.usod__wrap{
+		margin-top: 40px;
+		margin-bottom: 35px;
+	}
+}

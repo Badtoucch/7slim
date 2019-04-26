@@ -264,3 +264,14 @@
 .stat-graf-dn
 			+r(639)
 				display: none !important
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.stat-order::before
+		display: none
+	.stat-order
+		box-shadow: 0 0 35px rgba(134, 147, 162, 0.25)
+		background-color: #ffffff
+		height: 500px
+		width: 370px
+	.stat-btn
+		bottom: -28px

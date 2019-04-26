@@ -301,3 +301,15 @@
     }
   }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.reason__wrap--item{
+		background: none;
+		box-shadow: 0 0 35px rgba(134, 147, 162, 0.25);
+		background-color: #ffffff;
+		width: 370px;
+		padding: 20px 20px 25px;
+	}
+	.reason__wrap .center{
+		margin: 0 30px;
+	}
+}
