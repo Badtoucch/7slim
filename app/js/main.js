@@ -9,7 +9,7 @@
 
 
 $('.rev-top').slick({
-    infinite: true,
+    // infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
@@ -28,7 +28,7 @@ $('.rev-top').slick({
 });
 
 $('.rev-bottom').slick({
-    infinite: true,
+    // infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
@@ -48,7 +48,7 @@ $('.rev-bottom').slick({
 
 $('.rev-mid').slick({
 	centerMode: true,
-	infinite: true,
+	// infinite: true,
 	centerPadding: '0px',
 	slidesToShow: 7,
 	asNavFor: '.rev-top, .rev-bottom',
