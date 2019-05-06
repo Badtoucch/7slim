@@ -100,6 +100,11 @@
     display: flex;
     justify-content: center;
     background: url("../img/reason__line.svg") center 62px no-repeat;
+    &--cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &--item{
       display: flex;
       align-items: center;
@@ -133,6 +138,7 @@
       position: relative;
       z-index: 1;
     }
+
     &--head{
       font-weight: 700;
       color: #000000;
@@ -257,6 +263,14 @@
     }
     &__title {
       margin: 0 0 14px;
+    }
+    &__decision{
+      flex-direction: column;
+      align-items: center;
+      &--item{
+        flex-direction: row;
+        align-items: flex-start;
+      }
     }
   }
 }

@@ -95,6 +95,9 @@
     display: none;
   }
   .give{
+    .title{
+      text-align: center;
+    }
     &:after{
       display: none;
     }
@@ -109,6 +112,7 @@
       align-items: center;
       &--head{
         margin: 9px 0 0;
+        text-align: center;
       }
     }
     &__desc{
