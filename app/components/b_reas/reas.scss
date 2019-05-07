@@ -31,6 +31,8 @@
     display: flex;
     justify-content: center;
     margin: 16px 0 62px;
+    position: relative;
+    z-index: 1;
     &--item{
       display: flex;
       flex-direction: column;
@@ -190,12 +192,18 @@
 		padding-bottom: 15px;
     &__wrap{
       margin: 16px 0 13px;
+      .center{
+        margin: 0px 25px;
+      }
       &--item{
         background-size: cover;
         padding: 35px 21px;
         width: 317px;
         height: 466px;
       }
+    }
+    &__arrow{
+      margin-top: -10px;
     }
     &__title{
       margin: 32px 0 17px;
@@ -242,9 +250,7 @@
     }
     &__text{
       line-height: 21px;
-      &:before{
-        left: 43%;
-      }
+
     }
     &__head{
       height: 48px;
@@ -292,6 +298,9 @@
     }
     &__text{
       text-align: left;
+      &:before{
+        left: 0;
+      }
     }
     &__head{
       height: auto;
@@ -362,6 +371,11 @@
       text-align: center;
       margin: 0;
       align-items: center;
+    }
+    &__text{
+      &:before{
+        left: 45%;
+      }
     }
     &__decision{
       &--head{
