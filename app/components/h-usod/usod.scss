@@ -169,6 +169,8 @@
 
 @media (max-width: 1189px){
   .usod{
+		padding-top: 70px;
+		padding-bottom: 70px;
     &__wrap{
       &--item{
         width: 314px;
@@ -195,7 +197,14 @@
         }
       }
     }
-  }
+	}
+	.usod__line{
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+	.usod__decision--head:before{
+		margin: 11px auto 5px;
+	}
 }
 
 @media (max-width: 1023px){
@@ -213,7 +222,7 @@
       }
     }
     &__line{
-      margin: 60px auto;
+      margin: 30px auto;
     }
     &__decision{
       background: none;
@@ -231,9 +240,22 @@
       }
     }
     &__title{
-      margin: 0px 0 37px;
+      margin: 0px 0 5px;
     }
-  }
+	}
+	.usod__during{
+		display: flex;
+		align-items: center;
+	}
+	.usod__during--text{
+		text-align: left;
+		width: 320px;
+	}
+	.usod__during--icon{
+		margin-bottom: 0;
+		width: 75px;
+		height: 75px;
+	}
 }
 
 @media (max-width: 767px){
@@ -262,7 +284,7 @@
       }
     }
     &__title {
-      margin: 0 0 14px;
+      margin: 0 0 5px;
     }
     &__decision{
       flex-direction: column;
@@ -292,24 +314,27 @@
         }
       }
     }
-  }
-}
+	}
 
+}
+@media (max-width: 767px) and (min-width: 480px){
+	.usod__wrap--text{
+		text-align: left;
+		align-items: flex-start;
+		padding-left: 10px;
+	}
+	.usod__wrap--desc{
+		text-align: left;
+	}
+	.usod__wrap--desc:before{
+		left: 0;
+	}
+}
 @media (max-width: 639px){
   .usod{
     &__wrap {
-      flex-direction: column;
-      &--item {
-        &:nth-child(n) {
-          width: 100%;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-      &--img{
-        width: 200px;
-      }
+     
+     
     }
     &__during{
       width: 100%;
@@ -318,11 +343,38 @@
       flex-wrap: wrap;
 
     }
-  }
+	}
+	.usod__during{
+	flex-direction: column;
+	}
+	.usod__during--text{
+		text-align: center;
+		width: 100%;
+	}
+	.usod__during--icon{
+		margin-bottom: 10px;
+		width: 75px;
+		height: 75px;
+	}
 }
 
 @media (max-width: 479px){
-
+	.usod{
+    &__wrap {
+			flex-direction: column;
+			&--img{
+        width: 200px;
+      }
+      &--item {
+        &:nth-child(n) {
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
 	.usod__wrap--item{

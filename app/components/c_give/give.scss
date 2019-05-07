@@ -74,6 +74,7 @@
 }
 @media (max-width: 1189px) {
   .give{
+		padding-top: 105px;
     overflow: hidden;
     &__wrap{
       align-items: flex-start;
@@ -87,14 +88,25 @@
     position: relative;
     top: 12px;
     z-index: 0;
-  }
+	}
+	.give__text{
+		padding-bottom: 65px;
+	}
+	.girl{
+		top: 55px;
+	}
 }
 
 @media (max-width: 1023px) {
   .girl{
     display: none;
-  }
+	}
+	.give__text{
+		padding-bottom: 0;
+	}
   .give{
+		padding-top: 40px;
+		padding-bottom: 40px;
     .title{
       text-align: center;
     }
@@ -131,6 +143,8 @@
 
 @media (max-width: 767px){
   .give{
+		padding-top: 30px;
+		padding-bottom: 30px;
     &__list{
       &--item{
         font-size: 16px;
@@ -164,6 +178,8 @@
 
 @media (max-width: 479px){
   .give {
+		padding-top: 25px;
+		padding-bottom: 25px;
     .title{
       text-align: center;
     }

@@ -35,7 +35,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 44px 33px;
+      padding: 44px 34px;
       width: 394px;
       background: url(../img/bgn-2.svg) no-repeat #fff;
       background-position: center;
@@ -48,10 +48,24 @@
 
   }
   &__arrow{
-    background: url(../img/reason__hr.png) center no-repeat;
-    height: 16px;
-    width: 100%;
-    background-size: contain;
+		width: 100%;
+		height: 1.2px;
+		background-color: rgba(0,0,0,.15);
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background-color: #fff;
+			border: 1.2px solid rgba(0,0,0,.15);
+			border-left: none;
+			border-top: none;
+			transform: translateX(-50%) scaleY(0.7) rotate(45deg);
+			top: -15px;
+			left: 50%;
+		}
   }
   &__desc{
     display: flex;
@@ -167,12 +181,13 @@
     }
   }
   &__title{
-    margin: 56px 0 37px;
+    margin: 72px 0 37px;
   }
 }
 
 @media (max-width: 1189px) {
   .reason{
+		padding-bottom: 15px;
     &__wrap{
       margin: 16px 0 13px;
       &--item{
@@ -183,7 +198,7 @@
       }
     }
     &__title{
-      margin: 20px 0 17px;
+      margin: 32px 0 17px;
     }
     &__text{
       padding: 9px 0 0;
@@ -201,15 +216,22 @@
         font-size: 19px;
       }
     }
-  }
+	}
+	.reason__wrap{
+		margin-bottom: 10px;
+	}
 }
 
 @media (max-width: 1023px) {
   .reason {
     &:after{
       display: none;
+		}
+		&__title{
+      margin: 24px 0 17px;
     }
     &__wrap {
+			margin-bottom: 30px;
       &--item {
         background: #ffffff;
         padding: 14px 10px;
@@ -252,9 +274,10 @@
   .reason {
     &__wrap {
       flex-direction: column;
-      align-items: center;
+			align-items: center;
+			margin-bottom: 20px;
       &--item {
-        width: 450px;
+        width:620px;
         flex-direction: row;
         margin: 10px;
         img{
@@ -300,9 +323,30 @@
         flex-direction: row;
       }
     }
-  }
+	}
+	.reason__decision--cont{
+		position: relative;
+	}
+	.reason__decision--number{
+		margin: 0;
+		position: absolute;
+		left: -2px;
+		top: -25px;
+	}
+	.reason__arrow:before{
+		width: 22px;
+		height: 22px;
+		top: -11px;
+	}
 }
-
+@media (max-width: 639px){
+	.reason__wrap--item{
+		width: 100%;
+	}
+	.reason__wrap{
+		margin-bottom: 15px;
+	}
+}
 @media (max-width: 479px){
   .reason {
     &__wrap {

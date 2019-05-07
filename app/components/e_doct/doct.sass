@@ -2,6 +2,8 @@
 	padding: 100px 0 100px
 	background: url(../img/doctor-bg.png) no-repeat 10% 50%, linear-gradient(to top,rgba(224,57,84,.13) 0,rgba(222,217,165,.13) 48%,rgba(45,182,77,.13) 100%)
 	position: relative
+	+r(1189)
+		padding-top: 80px
 	+r(1023)
 		background:  linear-gradient(to top,rgba(224,57,84,.13) 0,rgba(222,217,165,.13) 48%,rgba(45,182,77,.13) 100%)
 	&:before
@@ -43,6 +45,7 @@
 				transform: translate(-117%)
 				+r(1189)
 					width: 390px
+					bottom: 52px
 				+r(1023)
 					display: none
 		&-boxyText
@@ -53,6 +56,9 @@
 				max-height: 330px
 			+r(1023)
 				max-height: 100%
+				margin-top: 15px
+			+r(639)
+				margin-top: 10px
 		&__spec
 			color: #333333
 			font-size: 20px
@@ -64,10 +70,10 @@
 				margin-bottom: 18px
 			+r(1023)
 				font-size: 19px
-				margin-bottom: 15px
+				margin-bottom: 5px
 			+r(639)
 				font-size: 18px
-				margin-bottom: 10px
+				margin-bottom: 0px
 		&__name
 			color: #000000
 			font-family: Roboto
@@ -78,11 +84,8 @@
 				font-size: 42px
 				margin-bottom: 20px
 			+r(1023)
-				font-size: 36px
-				margin-bottom: 15px
-			+r(1023)
 				font-size: 32px
-				margin-bottom: 10px
+				margin-bottom: 5px
 		&__stage
 			color: #333333
 			font-family: Roboto
@@ -96,9 +99,10 @@
 				padding-bottom: 25px
 			+r(1023)
 				font-size: 16px
-				padding-bottom: 20px
-				+r(1023)
-					margin-bottom: 10px
+				padding-bottom: 15px
+				margin-bottom: 0px
+			+r(639)
+				padding-bottom: 10px
 			&:before
 				content: ''
 				position: absolute
@@ -135,8 +139,14 @@
 			+r(1023)
 				margin-top: 15px
 				margin-bottom: 0
+				display: flex
+				justify-content: flex-end
+				position: relative
+				margin-top: -20px
 			+r(767)
 				margin-bottom: 0px
+			+r(479)
+				margin-top: 8px
 
 
 

@@ -2,6 +2,9 @@
 	padding: 154px 0 110px
 	background: linear-gradient(to top,rgba(224,57,84,.13) 0,rgba(222,217,165,.13) 48%,rgba(45,182,77,.13) 100%)
 	position: relative
+	+r(1189)
+		padding-top: 120px
+		padding-bottom: 70px
 	&:before
 		content: ''
 		position: absolute
@@ -20,7 +23,7 @@
 		bottom: -1px
 		background: url(../img/bg-line2.png) center repeat-x
 		width: 100%
-		height: 70px
+		height: 72px
 		transform: translateX(-50%) rotate(180deg)
 		+r(1023)
 			display: none
@@ -66,6 +69,8 @@
 			margin-top: 12px
 	&-mid
 		margin-bottom: 16px
+		+r(639)
+			margin-bottom: 5px
 		&-item
 			margin-right: 20px
 			margin-left: 20px
@@ -73,6 +78,7 @@
 			display: flex !important
 			align-items: center
 			justify-content: center
+			cursor: pointer
 			+r(1189)
 				margin-right: 25px
 				margin-left: 25px
@@ -83,7 +89,19 @@
 				margin-right: 25px
 				margin-left: 25px
 		&__img
+			+r(479)
 
+					&:after
+						content: ''
+						position: absolute
+						bottom: -9px
+						left: 50%
+						transform: translate(-50%)  scale(.7)
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 9px 7px 0 7px
+						border-color: #6aa423 transparent transparent transparent
 			img
 				opacity: 0.6
 				transition: all .5s
@@ -93,6 +111,20 @@
 
 				max-width: 106px
 				transition: max-width .5s
+				+r(639)
+					max-width: 100%
+					opacity: 1
+					&:after
+						content: ''
+						position: absolute
+						bottom: -9px
+						left: 50%
+						transform: translate(-50%)  scale(.7)
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 9px 7px 0 7px
+						border-color: #6aa423 transparent transparent transparent
 	&-bottom
 		&__text
 			color: #444444
@@ -298,6 +330,12 @@
 	justify-content: center
 	+r(1023)
 		margin-top: 15px
+	+r(767)
+		width: 380px
+		height: 65px
+	+r(479)
+		width: 280px
+
 
 .popup__review
 	display: none
