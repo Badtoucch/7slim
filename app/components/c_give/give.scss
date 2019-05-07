@@ -25,7 +25,7 @@
     &--head{
       color: #000000;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 500;
       margin: 16px 0 0;
       .font-black{
         font-weight: 900;
@@ -44,6 +44,10 @@
       font-size: 19px;
       align-items: flex-start;
       width: 204px;
+      color: #444444;
+      .text-bold{
+        color: #000;
+      }
       &:before{
         content: '';
         display: block;
@@ -70,7 +74,7 @@
 }
 .girl{
   position: relative;
-  top: 6px;
+  top: 8px;
 }
 @media (max-width: 1189px) {
   .give{

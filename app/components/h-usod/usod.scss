@@ -68,6 +68,16 @@
     width: 422px;
     margin: 0 auto;
     text-align: center;
+    .icon__cont{
+      border-radius: 50%;
+      width: 87px;
+      height: 87px;
+      border: 2px solid #fc8a1c;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     &--icon{
       background: #fc8a1c;
       display: flex;
@@ -78,8 +88,7 @@
       width: 85px;
       height: 85px;
       align-self: center;
-      margin: 0 auto 14px;
-      box-shadow: 0 0 0 1px #fc8a1c;
+      flex-shrink: 0;
     }
     &--text{
       color: #444444;
@@ -124,6 +133,16 @@
       position: relative;
       z-index: 0;
     }
+    .icon__cont--usod{
+      border-radius: 50%;
+      width: 98px;
+      height: 98px;
+      border: 1px solid #85c336;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &--icon{
       background: #85c336;
       display: flex;
@@ -134,7 +153,8 @@
       width: 96px;
       height: 96px;
       align-self: center;
-      box-shadow: 0 0 0 1px #85c336;
+      flex-shrink: 0;
+      //box-shadow: 0 0 0 1px #85c336;
       position: relative;
       z-index: 1;
     }
